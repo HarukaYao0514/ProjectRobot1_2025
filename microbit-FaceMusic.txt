@@ -1,0 +1,52 @@
+# Name: Yao YAo
+# Student ID: 202283890009
+# Course & Year: Project Semester 4
+# Date: 29/6/25
+
+k210_models.initialization()
+let face = -2
+basic.clearScreen()
+basic.forever(function () {
+    if (face == 0) {
+        music.play(music.stringPlayable("C5 - - - - - - - ", 120), music.PlaybackMode.UntilDone)
+        basic.clearScreen()
+    }
+    if (face == 1) {
+        music.play(music.stringPlayable("- B - - - - - - ", 120), music.PlaybackMode.UntilDone)
+        basic.clearScreen()
+    }
+    if (face == 2) {
+        music.play(music.stringPlayable("- - A - - - - - ", 120), music.PlaybackMode.UntilDone)
+        basic.clearScreen()
+    }
+    if (face == 3) {
+        music.play(music.stringPlayable("- - - G - - - - ", 120), music.PlaybackMode.UntilDone)
+        basic.clearScreen()
+    }
+    if (face == 4) {
+        music.play(music.stringPlayable("- - - - F - - - ", 120), music.PlaybackMode.UntilDone)
+        basic.clearScreen()
+    }
+    if (face == 5) {
+        music.play(music.stringPlayable("- - - - - E - - ", 120), music.PlaybackMode.UntilDone)
+        basic.clearScreen()
+    }
+    if (face == 6) {
+        music.play(music.stringPlayable("- - - - - - D - ", 120), music.PlaybackMode.UntilDone)
+        basic.clearScreen()
+    }
+    if (face == 7) {
+        music.play(music.stringPlayable("- - - - - - - C ", 120), music.PlaybackMode.UntilDone)
+        basic.clearScreen()
+    }
+    if (face == 8) {
+        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Wedding), music.PlaybackMode.UntilDone)
+        basic.clearScreen()
+    }
+})
+basic.forever(function () {
+    face = k210_models.face_reg()
+    if (face >= 0) {
+        basic.showNumber(face)
+    }
+})
